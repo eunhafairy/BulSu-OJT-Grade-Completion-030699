@@ -1,0 +1,13 @@
+<div class="topnav" [ngStyle] = "{'visibility': faculty}">
+    <a routerLink="/dashboard" routerLinkActive="active">Home</a>
+    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+     <a routerLink="/manage-request" routerLinkActive="active">Manage Request</a>
+    <a (click)="authService.SignOut()">Sign Out</a>
+</div>
+  
+<div class="topnav" [ngStyle] = "{'visibility': student}">
+    <a routerLink="/dashboard" routerLinkActive="active">Home</a>
+    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+     <a routerLink="/request" routerLinkActive="active">Request</a>
+    <a (click)="authService.SignOut()">Sign Out</a>
+</div>

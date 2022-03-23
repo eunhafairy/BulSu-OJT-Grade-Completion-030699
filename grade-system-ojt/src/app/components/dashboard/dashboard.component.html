@@ -1,0 +1,12 @@
+
+<app-header-dashboard></app-header-dashboard>
+          <!-- Show user data when logged in -->
+<div class="container" *ngIf="authService.userData as user">
+        
+  <img class="img" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+    alt="{{user.displayName}}">
+
+  <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+  <p>Email: <strong>{{user.email}}</strong></p>
+  <p>Role: <strong>{{authService.getRole(user.email)}}</strong></p>
+</div>  
